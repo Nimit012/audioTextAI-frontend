@@ -62,16 +62,17 @@ button {
   gap: 92px;
   justify-content: center;
   align-items: center;
-  .txt{
-      color: #666;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0.1rem;
-      font-weight: bold;
-      line-height: 1.5;
-  }
+ 
 }
 
+.txt{
+  color: #666;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
 
 /* Spinner animation */
 .spinner {
