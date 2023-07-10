@@ -62,7 +62,7 @@ const App = () => {
       answer: answer,
     };
 
-    fetch("http://localhost:8000/", {
+    fetch("https://audiotextai-backend.onrender.com/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -80,9 +80,7 @@ const App = () => {
         }
 
         let result = data.output;
-        console.log("data.finish_reason", result.finish_reason);
         if (result.finish_reason === "stop") {
-          console.log("response", result.message);
         } else if (result.finish_reason === "function_call") {
           const functionArgs = JSON.parse(
             result.message.function_call.arguments
@@ -123,9 +121,9 @@ const App = () => {
       </button>
 
       {showLoader && (
-        <div class="page-loader">
-          <div class="spinner"></div>
-          <div class="txt">Loading...</div>
+        <div className="page-loader">
+          <div className="spinner"></div>
+          <div className="txt">Loading...</div>
         </div>
       )}
       {functionCallResponse?.isCorrect && (
