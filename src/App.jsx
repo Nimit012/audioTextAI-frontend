@@ -109,15 +109,15 @@ const App = () => {
           onChange={(event) => setValue(event.target.value)}
         />
         <div className="button-container">
-          <button onClick={startRecording}>Start</button>
-          <button onClick={stopRecording}>Stop</button>
+          <button onClick={startRecording}>Start Recording</button>
+          <button onClick={stopRecording}>Stop Recording</button>
           <button onClick={resetAudio}> Reset</button>
         </div>
         {listening && <div>Go ahead I'm listening</div>}
       </div>
 
       <button disabled={!value} className="submit" onClick={getData}>
-        Submit
+        Check Answer
       </button>
 
       {showLoader && (
